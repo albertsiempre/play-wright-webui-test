@@ -1,7 +1,7 @@
-# **Page Register Test with Email OTP (Playwright)**
+# **Sample Automate Test on Register Page**
 
 ## Introduction
-In this case we will using kitabisa web register and mailosaur for email testing service.
+In this example, we will do an automate test on the register page of kitabisa.com until we successfully get the OTP on the email and successfully register the user. (include github action sample)
 
 ## Getting Started
 > Please make sure you already have account in [mailosaur](https://mailosaur.com/) and please read the detail [doc mailosaur](https://mailosaur.com/docs/) for get credential
