@@ -1,0 +1,33 @@
+name: Playwright webUI Tests
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14.x'
+    - name: Install dependencies
+      run: npm ci
+    - name: Install Playwright
+      run: npx playwright install --with-deps
+    - name: Run Playwright tests
+      run: npx playwright test
+      env:
+        MAILOSAUR_SERVERDOMAIN: ${{ secrets.MAILOSAUR_SERVERDOMAIN }}
+        MAILOSAUR_SERVERID: ${{ secrets.MAILOSAUR_SERVERID }}
+        MAILOSAUR_API_KEY: ${{ secrets.MAILOSAUR_API_KEY }}
+        PASSWORD_KITABISA: ${{ secrets.PASSWORD_KITABISA }}
+        EMAIL_REGISTERED: ${{ secrets.EMAIL_REGISTERED }}
+    - uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30
