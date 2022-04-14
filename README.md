@@ -13,11 +13,10 @@ In this example, we will do an automate test on the register page of kitabisa.co
 
 ## Environment Variable Configuration
 
-> Please configure this the OS environment variable in order to configure the application
+> Please configure this the OS environment variable
 > example : `export YOUR_VARIABLE=your_value`
 
-### Application Config
-| Param Name | Description
+| Variable | Description
 | - | -
 | `MAILOSAUR_API_KEY` | Mailosaur API Key
 | `MAILOSAUR_SERVERDOMAIN` | Mailosaur Server Domain
