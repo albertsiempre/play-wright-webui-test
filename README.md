@@ -10,6 +10,7 @@ In this example, we will do an automate test on the register page of kitabisa.co
  3. Run `npx playwright install` for install supported browser
  4. Run `npm install mailosaur --save-dev` for install mailosaur lib
  5. Set Environment Variables, please see below.
+ 6. Run `npx playwright test` for run the test
 
 ## Environment Variable Configuration
 
