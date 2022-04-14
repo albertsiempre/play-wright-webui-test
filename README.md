@@ -23,5 +23,3 @@ In this example, we will do an automate test on the register page of kitabisa.co
 | `MAILOSAUR_SERVERID` | Mailosaur Server ID
 | `EMAIL_REGISTERED` | Use for negative scenario email already registered on system
 | `PASSWORD_KITABISA` | Your password for login to system
-
-### Note
